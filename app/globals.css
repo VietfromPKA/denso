@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+/* Auto-hiding 4px scrollbar: transparent at rest, shown on hover. Thumb color goes through a
+   variable on the scroll container itself so Chrome repaints it immediately on hover. */
+* { --scrollbar-thumb: transparent; }
+*:hover { --scrollbar-thumb: rgba(15, 23, 42, 0.16); }
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--scrollbar-thumb); border-radius: 9999px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(15, 23, 42, 0.4); }
+@supports not selector(::-webkit-scrollbar) {
+  * { scrollbar-width: thin; scrollbar-color: transparent transparent; }
+  *:hover { scrollbar-color: rgba(15, 23, 42, 0.18) transparent; }
+}
+
+/* React Flow tweaks */
+.react-flow__edge-textbg { fill: #f8fafc; }
+.react-flow__attribution { display: none; }
+
+input[type="range"] { accent-color: #0d9488; }

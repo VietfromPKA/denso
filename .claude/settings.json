@@ -1,0 +1,13 @@
+{
+  "extraKnownMarketplaces": {
+    "evondevkit": {
+      "source": {
+        "source": "github",
+        "repo": "evondev/evondevKit"
+      }
+    }
+  },
+  "enabledPlugins": {
+    "evon@evondevkit": true
+  }
+}
